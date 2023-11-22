@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+    <script>
+        $(document).ready(function(){
+            $(".dropdowncontent").hide();
+            $(".drop").click(function(){
+                $(this).next(".dropdowncontent").slideToggle("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <div class="sidebar">
+            <div class="exit" onclick=hideSidebar()>
+                <a href="#">
+                <i class='bx bx-x'></i>            
+                </a>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Home</button>
+            </div>
+    
+            <div class="dropdown">
+                <button class="drop">Restaurants
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <button class="drop">Recipes
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <button class="drop">Today's Pick
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Breakfast</a>
+                    <a href="#">Lunch</a>
+                    <a href="#">Dinner</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="home">
+            <div class="dropdown">
+                <button class="drop">Home</button>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Restaurants
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Recipes
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Today's Pick
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Breakfast</a>
+                    <a href="#">Lunch</a>
+                    <a href="#">Dinner</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu" onclick=showSidebar()>
+            <a href="#">
+            <i class='bx bx-menu'></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section aria-label="Newest Photos">
+            <div class="carousel" data-carousel>
+                <button class="carousel-button previous" data-carousel-button="prev"><i class='bx bxs-left-arrow' ></i></button> 
+                <button class="carousel-button next" data-carousel-button="next"><i class='bx bxs-right-arrow'></i></button> 
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <img src="https://10619-2.s.cdn12.com/rests/original/108_511637899.jpg" alt="Burger King 1">
+                    </li>
+                    <li class="slide">
+                        <img src="https://b.zmtcdn.com/data/pictures/9/18793749/056cdbc6086f84ded1798d50443968ce.jpg?crop=3000:3000%3B553%2C0&fit=around|200:200" alt="Burger King 2">
+                    </li>
+                    <li class="slide">
+                        <img src="https://d.newsweek.com/en/full/1544801/burger-king-impossible-whopper.jpg" alt="Burger King 3">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="text">
+            <h1>Burger King, FX Sudirman</h1>
+            <p>Burger King is an American-based multinational chain of hamburger fast food restaurants. It serves a wide variety of fast foods, such as burger, french fries, fried chicken, and many more.</p>
+            <br>
+            <p><b>Location:</b> Jl. Jenderal Sudirman, RT.1/RW.3 10270 Daerah Khusus Ibukota Jakarta Jawa</p>
+            <br>
+            <p><b>Number:</b> +62 1 500 025</p>
+            <br>
+            <p><b>Rating:</b>
+                <i class='bx bxs-star' style="color: #b19232;"></i> 
+                <i class='bx bxs-star' style="color: #b19232;"></i>
+                <i class='bx bxs-star' style="color: #b19232;"></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </p>
+            <br>
+            <p><b>Price:</b>
+                <i class='bx bxs-dollar-circle' style="color: #b19232;"></i> 
+                <i class='bx bxs-dollar-circle' style="color: #b19232;"></i>
+                <i class='bx bxs-dollar-circle'></i>
+                <i class='bx bxs-dollar-circle'></i>
+                <i class='bx bxs-dollar-circle'></i>
+            </p>
+        </div>
+    </div>
+
+
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+</script>
+
+
+</body>
+</html>
